@@ -1,0 +1,65 @@
+<div class="chat-page">
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="chat-title">
+        <span class="circle">
+          <i class="fas fa-robot"></i>
+        </span>
+        <span class="chat-name">Chat API</span>
+      </div>
+    </div>
+    <div class="chat-body">
+      <div class="welcome-message">
+        <span class="circle">
+          <i class="fas fa-robot"></i>
+        </span>
+        <div class="message-content">
+          <span id="robot-message">{{ welcomeMessage }}</span>
+          @if (welcomeMessageComplete) {
+          <span id="current-time">{{ currentTime }}</span>
+          }
+        </div>
+      </div>
+      <div class="messages-container">
+        @for (message of messages; track message) {
+        <div
+          class="message-wrapper"
+          [class.user-message-wrapper]="message.sender === 'Tú'"
+        >
+          <div
+            class="message-container"
+            [class.user-message-container]="message.sender === 'Tú'"
+          >
+            @if (message.sender === 'API') {
+            <span class="circle">
+              <i class="fas fa-robot"></i>
+            </span>
+            }
+            <div class="message" [class.user-message]="message.sender === 'Tú'">
+              <span class="message-content">{{ message.content }}</span>
+              @if (message.showTime) {
+              <span class="message-time">{{ message.time }}</span>
+              } @if (message.isLoading) {
+              <div class="spinner-container">
+                <div class="spinners" id="spinner-one"></div>
+                <div class="spinners" id="spinner-two"></div>
+                <div class="spinners" id="spinner-three"></div>
+              </div>
+              }
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+    <form [formGroup]="chatForm" (ngSubmit)="sendMessage()">
+      <textarea
+        class="message-input"
+        placeholder="Escribe aquí y pulsa intro..."
+        formControlName="newMessage"
+        (keyup.enter)="sendMessage()"
+      ></textarea>
+      <button type="submit" style="display: none"></button>
+    </form>
+  </div>
+</div>
