@@ -20,7 +20,7 @@ AngularChatAPI/
 │   │   └───TypewriterService.ts   
 │   ├───AppComponent.html  
 │   ├───AppComponent.ts   
-├───angular.json
+├───angular.json   
 └───package.json 
 
 
