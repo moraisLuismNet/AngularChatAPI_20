@@ -1,7 +1,6 @@
 ## AngularChatAPI
 
-**AngularChatAPI** It is an interactive chat system with visual effects that simulates a conversation through an API, using Angular as the main framework.
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 20.1.2.
+**AngularChatAPI** is an interactive chat system with visual effects that simulates a conversation through a REST API, using Angular 20.1.2 as its main framework. The project includes typewriter effects to create a more immersive chat experience, uses PrimeNG for UI components, RxJS for reactive programming and TypeScript 5.8.3.
 
 ![AngularChatAPI](img/UML.png)
 
@@ -29,28 +28,36 @@ AngularChatAPI/
 
 [DeepWiki moraisLuismNet/AngularChatAPI_20](https://deepwiki.com/moraisLuismNet/AngularChatAPI_20)
 
+## API Configuration
+The chat service is configured to connect to:
+```
+https://localhost:7274/api/chat
+```
 
-## Development server
+**Note**: Make sure your backend API is running at this URL before using the application.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Installation and Usage
 
-## Code scaffolding
+### Installation Steps
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clone the repository**
+```bash
+git clone https://github.com/moraisLuismNet/AngularChatAPI_20.git
+cd AngularChatAPI_20
+```
 
-## Build
+2. **Install dependencies**
+```bash
+npm install
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. **Start the development server
+```bash
+npm start
+# or alternatively
+ng serve
+```
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. **Open your browser**
+Navigate to `http://localhost:4200/`
 
