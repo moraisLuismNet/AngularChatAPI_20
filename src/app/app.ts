@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ChatComponent } from './components/chat/ChatComponent';
+import { ChatComponent } from './components/chat/chat';
 
 @Component({
   selector: 'app-root',
   imports: [CommonModule, ChatComponent],
-  templateUrl: './AppComponent.html',
+  templateUrl: './app.html',
   styles: [
     `
       .container {

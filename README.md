@@ -8,17 +8,18 @@ AngularChatAPI/
 ├───app/  
 │   ├───components/  
 │   │   ├───chat/  
-│   │   │   ├───ChatComponent.css  
-│   │   │   ├───ChatComponent.html  
-│   │   │   └───ChatComponent.ts   
+│   │   │   ├───chat.css  
+│   │   │   ├───chat.html  
+│   │   │   └───chat.ts   
 │   ├───interfaces/  
-│   │   ├───ChatInterface.ts  
-│   │   └───MessageInterface.ts  
+│   │   ├───chat.interface.ts  
+│   │   └───message.interface.ts  
 │   ├───services/  
-│   │   ├───ChatService.ts  
-│   │   └───TypewriterService.ts   
-│   ├───AppComponent.html  
-│   ├───AppComponent.ts   
+│   │   ├───chat.ts  
+│   │   └───typewriter.ts   
+│   ├───app.html  
+│   ├───app.ts  
+├───main.ts      
 ├───angular.json   
 └───package.json 
 

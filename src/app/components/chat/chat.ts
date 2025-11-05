@@ -6,15 +6,15 @@ import {
   FormControl,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { ChatService } from '../../services/ChatService';
-import { TypewriterService } from '../../services/TypewriterService';
-import { ChatResponse } from '../../interfaces/ChatInterface';
+import { ChatService } from '../../services/chat';
+import { TypewriterService } from '../../services/typewriter';
+import { ChatResponse } from '../../interfaces/chat.interface';
 
 @Component({
   selector: 'app-chat',
   imports: [CommonModule, FormsModule, ReactiveFormsModule],
-  templateUrl: './ChatComponent.html',
-  styleUrls: ['./ChatComponent.css'],
+  templateUrl: './chat.html',
+  styleUrls: ['./chat.css'],
 })
 export class ChatComponent implements OnInit {
   messages: {
